@@ -33,7 +33,8 @@ export default function Home() {
                                 return (
                                     <MediaCard
                                         image={item.images.jpg.image_url}
-                                        name={item.title.title_english}
+                                        name={item.title_english}
+                                        name2={item.title}
                                         key={item.mal_id}
                                     />
                                 );
