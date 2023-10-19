@@ -13,3 +13,9 @@
     padding-left: 100px;
     padding-right: 100px;
 }
+
+/* test  cards */
+.result {
+    display: flex;
+    gap: 1rem;
+}
