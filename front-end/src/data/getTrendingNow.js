@@ -1,17 +1,17 @@
-const getTrandingNow = async () => {
+const getSeasonal = async (page) => {
     try {
-        const response = await fetch("https://api.jikan.moe/v4/top/anime?filter=airing&limit=25");
+        const response = await fetch(`https://api.jikan.moe/v4/seasons/now?unapproved&sfw&limit=25&page=${page}`);
         const data = await response.json();
 
         if (data.status) {
             throw new Error(data.type);
         }
 
-        return data.data;
+        return data;
 
     } catch(err) {
         console.log(err)
     }
 }
 
-export default getTrandingNow;
+export default getSeasonal;

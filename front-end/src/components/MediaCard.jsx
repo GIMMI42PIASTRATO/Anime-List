@@ -15,6 +15,6 @@ export default function MediaCard({ image, name1, name2 }) {
 
 MediaCard.propTypes = {
     image: PropTypes.string.isRequired,
-    name1: PropTypes.string.isRequired,
-    name2: PropTypes.string.isRequired,
+    name1: PropTypes.string,
+    name2: PropTypes.string,
 };
