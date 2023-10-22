@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import style from "../style/Home.module.css";
-import getSeasonal from "../data/getTrendingNow";
-import MediaCard from "./MediaCard";
+import style from "./home.module.css";
+import getSeasonal from "../../data/getTrendingNow";
+import MediaCard from "../mediaCard/MediaCard";
 import { v4 as uuidv4 } from "uuid";
 import { useRef } from "react";
 
@@ -11,6 +11,8 @@ export default function Home() {
     const [page, setPage] = useState(1);
 
     const bottomRef = useRef(null);
+
+    // Questo codice è stato creato come prova aggiungere anime alla lista, varrà inserito all'interno di un componente che verrà creato in futuro
 
     useEffect(() => {
         async function fetchData() {

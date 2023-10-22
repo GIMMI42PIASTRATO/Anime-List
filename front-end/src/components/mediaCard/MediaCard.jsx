@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
-import style from "../style/MediaCard.module.css";
+import style from "./mediaCard.module.css";
+import QuickAction from "../quickAction/quickAction";
 
 export default function MediaCard({ image, name1, name2 }) {
     // Il nome1 rappresenta il nome dell'anime in inglese, il nome2 rappresenta il nome dell'anime se name1 è null
     return (
         <div className={style.cardContainer}>
-            <a href="#">
+            <div className={style.cover}>
                 <img src={image} alt="anime logo" />
-            </a>
+                <QuickAction />
+            </div>
             <a href="#">{name1 ? name1 : name2}</a>
         </div>
     );

@@ -1,0 +1,12 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: min-content;
+}
+
+.cover {
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.15),0 4px 4px rgba(var(--color-shadow-blue),.05);
+    cursor: pointer;
+}

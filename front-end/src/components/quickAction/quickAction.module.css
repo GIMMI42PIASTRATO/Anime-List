@@ -1,0 +1,11 @@
+.buttonWrap {
+    position: absolute;
+    display: flex;
+    font-size: 2rem;
+    color: black;
+}
+
+/* .icon {
+    top: 10px;
+    position: absolute;
+} */

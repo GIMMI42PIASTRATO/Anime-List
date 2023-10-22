@@ -1,6 +1,6 @@
 //import React from "react";
-import sytle from "../style/NavBar.module.css";
-import logo from "../assets/anime-list.svg";
+import sytle from "./NavBar.module.css";
+import logo from "../../assets/anime-list.svg";
 
 export default function NavBar() {
     return (
