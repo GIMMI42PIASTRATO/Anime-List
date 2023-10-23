@@ -1,8 +1,12 @@
 .buttonWrap {
     position: absolute;
+    bottom: 17px;
+    right: 14px;
     display: flex;
     font-size: 2rem;
-    color: black;
+    color: transparent;
+    background-color: white;
+    border-radius: 50%;
 }
 
 /* .icon {
