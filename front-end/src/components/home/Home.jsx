@@ -68,6 +68,7 @@ export default function Home() {
                                             image={item.images.jpg.image_url}
                                             name={item.title_english}
                                             name2={item.title}
+                                            id={item.mal_id}
                                             key={uuidv4()}
                                         />
                                     );
