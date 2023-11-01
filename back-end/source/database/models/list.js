@@ -26,6 +26,11 @@ const listSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    mal_id: {
+        type: Number,
+        required: true,
+        trim: true,
+    }
 })
 
 module.exports = mongoose.model("List", listSchema)

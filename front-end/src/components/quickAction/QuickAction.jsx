@@ -7,7 +7,7 @@ export default function QuickAction({ color = "black", id }) {
     const [isClicked, setIsClicked] = useState(false);
 
     useEffect(() => {
-        const handleAdd = async () => {
+        async function handleAdd() {
             try {
                 const response = await fetch(
                     `http://localhost:3001/api/v1/anime/${id}`,
@@ -15,12 +15,15 @@ export default function QuickAction({ color = "black", id }) {
                         method: "POST",
                     }
                 );
-
                 const data = await response.json();
+
+                if (data.status === 500) {
+                    throw new Error(data.msg);
+                }
             } catch (err) {
                 console.log(err);
             }
-        };
+        }
         handleAdd();
     }, [isClicked]);
 
@@ -39,4 +42,5 @@ export default function QuickAction({ color = "black", id }) {
 
 QuickAction.propTypes = {
     color: PropTypes.string,
+    id: PropTypes.number.isRequired,
 };

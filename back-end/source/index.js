@@ -2,6 +2,8 @@ const express = require("express");
 const listRouter = require("./router/list");
 const app = express();
 
+require("./database")
+
 const PORT = 3000;
 
 app.use(express.json());
