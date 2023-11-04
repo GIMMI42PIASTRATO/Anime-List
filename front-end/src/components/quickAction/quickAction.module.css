@@ -1,15 +1,29 @@
-.buttonWrap {
+.container {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 17px;
     right: 14px;
-    display: flex;
-    font-size: 2rem;
-    color: transparent;
-    background-color: white;
+    background-color: rgba(31, 39, 49, .9);
+    box-shadow: rgba(45, 45, 45, .35);
     border-radius: 50%;
+    height: 28px;
+    width: 28px;
 }
 
-/* .icon {
-    top: 10px;
-    position: absolute;
-} */
+.icon {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.container:hover {
+    background-color: rgba(31, 39, 49, 1);
+    box-shadow: rgba(45, 45, 45, .35);
+    transform: scale(1.1);
+    transition: transform .2s ease-in-out;
+}
+
+.container:not(:hover) {
+    transition: transform .2s ease-in-out;
+}

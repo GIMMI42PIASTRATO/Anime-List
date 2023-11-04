@@ -1,8 +1,8 @@
-import { MdOutlineAddCircle } from "react-icons/md";
+import { FaPlus } from "react-icons/fa";
 import style from "./quickAction.module.css";
 import PropTypes from "prop-types";
 
-export default function QuickAction({ color = "black", id }) {
+export default function QuickAction({ id }) {
     const handleAdd = async () => {
         try {
             const response = await fetch(
@@ -22,17 +22,12 @@ export default function QuickAction({ color = "black", id }) {
     };
 
     return (
-        <div>
-            <MdOutlineAddCircle
-                className={style.buttonWrap}
-                style={{ color: color }}
-                onClick={() => handleAdd()}
-            />
+        <div className={style.container}>
+            <FaPlus className={style.icon} onClick={() => handleAdd()} />
         </div>
     );
 }
 
 QuickAction.propTypes = {
-    color: PropTypes.string,
     id: PropTypes.number.isRequired,
 };
