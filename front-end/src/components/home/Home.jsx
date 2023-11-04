@@ -57,7 +57,7 @@ export default function Home() {
                         filter prova prova prova prova prova prova prova prova
                     </div>
                     <div className={style.highlighted}>
-                        <p>Tranding now TEST</p>
+                        <h1 className={style.sectionTitle}>Seasonal Anime</h1>
                         <div className={style.result}>
                             {loading ? (
                                 <div>Loading...</div>

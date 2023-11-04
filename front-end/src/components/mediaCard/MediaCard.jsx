@@ -7,7 +7,7 @@ export default function MediaCard({ image, name1, name2, id }) {
     return (
         <div className={style.cardContainer}>
             <div className={style.cover}>
-                <img src={image} alt="anime logo" />
+                <img className={style.image} src={image} alt="anime logo" />
                 <QuickAction id={id} />
             </div>
             <a href="#">{name1 ? name1 : name2}</a>

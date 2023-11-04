@@ -20,3 +20,10 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

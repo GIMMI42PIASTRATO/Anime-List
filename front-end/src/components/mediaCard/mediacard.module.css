@@ -1,12 +1,18 @@
 .cardContainer {
     display: flex;
     flex-direction: column;
-    max-width: min-content;
+    width: 185px;
 }
 
 .cover {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    border-radius: 4px;
-    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.15),0 4px 4px rgba(var(--color-shadow-blue),.05);
     cursor: pointer;
+    height: 256px;
+}
+
+.image {
+    border-radius: 4px;
+    height: 100%;
 }
