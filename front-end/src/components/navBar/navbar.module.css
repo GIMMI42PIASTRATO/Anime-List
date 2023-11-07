@@ -25,10 +25,17 @@
 }
 
 .link {
-    color: #D3D5F3;
+    cursor: pointer;
+    color: #bcbedc;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-decoration: none;
     font-size: 0.875rem;
     margin: 0 20px;
+    transition: .15s ease-in-out;
+}
+
+.link:hover {
+    color: #d3d5e8;
+    transition: .15s ease-in-out;
 }
