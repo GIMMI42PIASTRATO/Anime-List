@@ -1,3 +1,12 @@
+import PageContent from "../../components/PageContent/PageContent";
+
 export default function AnimeList() {
-    return <div>Questo è un componente che si trova in /animelist</div>;
+    return (
+        <>
+            <PageContent>
+                <div>Se funziona sono fortissimo</div>
+                <div>We are frogs</div>
+            </PageContent>
+        </>
+    );
 }
