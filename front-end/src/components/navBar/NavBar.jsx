@@ -1,6 +1,7 @@
 //import React from "react";
 import sytle from "./NavBar.module.css";
 import logo from "../../assets/anime-list.svg";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
     return (
@@ -10,9 +11,15 @@ export default function NavBar() {
                     <img className={sytle.img} src={logo} alt="" />
                 </a>
                 <div>
-                    <a className={sytle.link}>Home</a>
-                    <a className={sytle.link}>Profile</a>
-                    <a className={sytle.link}>Anime List</a>
+                    <Link className={sytle.link} to={"/"}>
+                        Home
+                    </Link>
+                    <Link className={sytle.link} to={"/profile"}>
+                        Profile
+                    </Link>
+                    <Link className={sytle.link} to={"/animelist"}>
+                        Anime List
+                    </Link>
                 </div>
                 <div>SEARCH</div>
             </div>

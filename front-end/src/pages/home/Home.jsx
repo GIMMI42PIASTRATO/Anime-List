@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./home.module.css";
 import getSeasonal from "../../data/getTrendingNow";
-import MediaCard from "../mediaCard/MediaCard";
+import MediaCard from "../../components/mediaCard/MediaCard";
 import { v4 as uuidv4 } from "uuid";
 import { useRef } from "react";
 
