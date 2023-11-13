@@ -4,6 +4,7 @@ import getSeasonal from "../../data/getTrendingNow";
 import MediaCard from "../../components/mediaCard/MediaCard";
 import { v4 as uuidv4 } from "uuid";
 import { useRef } from "react";
+import PageContent from "../../components/PageContent/PageContent";
 
 export default function Home() {
     const [data, setData] = useState([]);
@@ -51,33 +52,31 @@ export default function Home() {
 
     return (
         <>
-            <div className={style.pageContent}>
-                <div className={style.container}>
-                    <div className={style.filterWrap}>
-                        filter prova prova prova prova prova prova prova prova
-                    </div>
-                    <div className={style.highlighted}>
-                        <h1 className={style.sectionTitle}>Seasonal Anime</h1>
-                        <div className={style.result}>
-                            {loading ? (
-                                <div>Loading...</div>
-                            ) : (
-                                data.map((item) => {
-                                    return (
-                                        <MediaCard
-                                            image={item.images.jpg.image_url}
-                                            name={item.title_english}
-                                            name2={item.title}
-                                            id={item.mal_id}
-                                            key={uuidv4()}
-                                        />
-                                    );
-                                })
-                            )}
-                        </div>
+            <PageContent>
+                <div className={style.filterWrap}>
+                    filter prova prova prova prova prova prova prova prova
+                </div>
+                <div className={style.highlighted}>
+                    <h1 className={style.sectionTitle}>Seasonal Anime</h1>
+                    <div className={style.result}>
+                        {loading ? (
+                            <div>Loading...</div>
+                        ) : (
+                            data.map((item) => {
+                                return (
+                                    <MediaCard
+                                        image={item.images.jpg.image_url}
+                                        name={item.title_english}
+                                        name2={item.title}
+                                        id={item.mal_id}
+                                        key={uuidv4()}
+                                    />
+                                );
+                            })
+                        )}
                     </div>
                 </div>
-            </div>
+            </PageContent>
             <div ref={bottomRef}></div>
         </>
     );
