@@ -1,4 +1,5 @@
 import style from "./pageContent.module.css";
+import PropTypes from "prop-types";
 
 export default function PageContent({ children }) {
     return (
@@ -7,3 +8,7 @@ export default function PageContent({ children }) {
         </div>
     );
 }
+
+PageContent.propTypes = {
+    children: PropTypes.node,
+};
