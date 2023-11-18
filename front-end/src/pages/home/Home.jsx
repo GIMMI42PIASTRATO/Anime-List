@@ -1,10 +1,14 @@
+// librarys imports
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import { useRef } from "react";
+
+// local imports
 import style from "./home.module.css";
 import getSeasonal from "../../data/getTrendingNow";
 import MediaCard from "../../components/mediaCard/MediaCard";
-import { v4 as uuidv4 } from "uuid";
-import { useRef } from "react";
 import PageContent from "../../components/PageContent/PageContent";
+import Filters from "../../components/Filter/Filters";
 
 export default function Home() {
     const [data, setData] = useState([]);
@@ -14,6 +18,24 @@ export default function Home() {
     const bottomRef = useRef(null);
 
     // Questo codice è stato creato come prova aggiungere anime alla lista, varrà inserito all'interno di un componente che verrà creato in futuro
+
+    const generes = [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Horror",
+        "Mecha",
+        "Mystery",
+        "Psychological",
+        "Romance",
+        "Sci-Fi",
+        "Slice of Life",
+        "Sports",
+        "Supernatural",
+        "Thriller",
+    ];
 
     useEffect(() => {
         async function fetchData() {
@@ -53,9 +75,12 @@ export default function Home() {
     return (
         <>
             <PageContent>
-                <div className={style.filterWrap}>
-                    filter prova prova prova prova prova prova prova prova
-                </div>
+                <Filters name="Search" type="SEARCH" />
+                <Filters
+                    name="Genere"
+                    type="SEARCH_DROPDOWN"
+                    dropDownData={generes}
+                />
                 <div className={style.highlighted}>
                     <h1 className={style.sectionTitle}>Seasonal Anime</h1>
                     <div className={style.result}>
