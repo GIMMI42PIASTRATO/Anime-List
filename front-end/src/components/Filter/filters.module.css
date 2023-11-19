@@ -1,0 +1,42 @@
+.filter {
+    box-sizing: border-box;
+}
+
+.filterDefault{
+    display: grid;
+    grid-template-columns: 13px auto 13px;
+    grid-gap: 10px;
+    background-color: rgb(251,251,251);
+    padding: 11px 16px;
+    border-radius: 6px;
+    box-shadow: 0 14px 30px rgba(103,132,187, .1), 0 4px 4px rgba(103,132,187, .04);
+}
+
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(176, 192, 210);
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.filterDefault input {
+    font-family: 'Overpass', sans-serif;
+    width: 105px;
+    height: 16px;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: .8rem;
+    font-weight: 400;
+    color: rgb(116,136,153);
+    background-color: transparent;
+}
+
+.name {
+    font-size: .938rem;
+    color: rgb(81,97,112);
+    padding: 10px 0;
+    font-weight: 600;
+}

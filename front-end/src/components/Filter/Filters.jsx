@@ -1,30 +1,25 @@
 import style from "./filters.module.css";
 import PropTypes from "prop-types";
-import { TbSearch } from "react-icons/tb";
+import { FaSearch } from "react-icons/fa";
 
 export default function Filters({ name, type, dropDownData }) {
     return (
-        <div>
+        <div className={style.filter}>
             <div className={style.name}>{name}</div>
             {type === "SEARCH" ? (
                 <div className={style.filterDefault}>
+                    <div className={style.placeholder}>{<FaSearch />}</div>
                     <input
-                        className={style.search}
+                        className={style.gridItem}
                         type="text"
                         name="search"
                         id=""
-                        placeholder={<TbSearch />}
                     />
                 </div>
             ) : type === "SEARCH_DROPDOWN" ? (
                 <div className={style.filterDefault}>
-                    <div className={style.placeholder}></div>
-                    <input
-                        className={style.search}
-                        type="text"
-                        name="search"
-                        id=""
-                    />
+                    <div className={style.placeholder}>Any</div>
+                    <input type="text" name="search" id="" />
                     <div className={style.dropdown}>
                         {dropDownData.map((item, i) => (
                             <div className={style.item} key={i}>
@@ -35,6 +30,8 @@ export default function Filters({ name, type, dropDownData }) {
                 </div>
             ) : (
                 <div className={style.filterDefault}>
+                    <div className={style.placeholder}>Any</div>
+                    <input type="text" name="search" id="" readOnly />
                     <div className={style.dropdown}>
                         {dropDownData.map((item, i) => (
                             <div className={style.item} key={i}>

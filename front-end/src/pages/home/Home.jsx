@@ -75,12 +75,20 @@ export default function Home() {
     return (
         <>
             <PageContent>
-                <Filters name="Search" type="SEARCH" />
-                <Filters
-                    name="Genere"
-                    type="SEARCH_DROPDOWN"
-                    dropDownData={generes}
-                />
+                <div className={style.filtersContainer}>
+                    <Filters name="Search" type="SEARCH" />
+                    <Filters
+                        name="Genere"
+                        type="SEARCH_DROPDOWN"
+                        dropDownData={generes}
+                    />
+                    <Filters
+                        name="Test"
+                        type="DROPDOWN"
+                        dropDownData={generes}
+                    />
+                </div>
+
                 <div className={style.highlighted}>
                     <h1 className={style.sectionTitle}>Seasonal Anime</h1>
                     <div className={style.result}>
