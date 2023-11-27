@@ -6,6 +6,7 @@ export default function Filters({ name, type, dropDownData }) {
     return (
         <div className={style.filter}>
             <div className={style.name}>{name}</div>
+
             {type === "SEARCH" ? (
                 <div className={style.filterDefault}>
                     <div className={style.placeholder}>{<FaSearch />}</div>
@@ -17,29 +18,37 @@ export default function Filters({ name, type, dropDownData }) {
                     />
                 </div>
             ) : type === "SEARCH_DROPDOWN" ? (
-                <div className={style.filterDefault}>
-                    <div className={style.placeholder}>Any</div>
-                    <input type="text" name="search" id="" />
-                    <div className={style.dropdown}>
-                        {dropDownData.map((item, i) => (
-                            <div className={style.item} key={i}>
-                                {item}
-                            </div>
-                        ))}
+                <>
+                    <div
+                        className={`${style.filterDefault} ${style.filterDropdown}`}
+                    >
+                        <div className={style.placeholder}>Any</div>
+                        <input type="text" name="search" id="" />
                     </div>
-                </div>
+                    <ul className={style.dropdown}>
+                        {dropDownData.map((item, i) => (
+                            <li className={style.item} key={i}>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </>
             ) : (
-                <div className={style.filterDefault}>
-                    <div className={style.placeholder}>Any</div>
-                    <input type="text" name="search" id="" readOnly />
-                    <div className={style.dropdown}>
-                        {dropDownData.map((item, i) => (
-                            <div className={style.item} key={i}>
-                                {item}
-                            </div>
-                        ))}
+                <>
+                    <div
+                        className={`${style.filterDefault} ${style.filterDropdown}`}
+                    >
+                        <div className={style.placeholder}>Any</div>
+                        <input type="text" name="search" id="" readOnly />
                     </div>
-                </div>
+                    <ul className={style.dropdown}>
+                        {dropDownData.map((item, i) => (
+                            <li className={style.item} key={i}>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </>
             )}
         </div>
     );
