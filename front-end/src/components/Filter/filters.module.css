@@ -12,16 +12,28 @@
     box-shadow: 0 14px 30px rgba(103,132,187, .1), 0 4px 4px rgba(103,132,187, .04);
 }
 
+.filterDropdown {
+
+    grid-template-columns: auto 20px;
+    align-items: center;
+}
+
+.valueWrap {
+    display: flex;
+    position: relative;
+    align-self: center;
+}
+
 .placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
     color: rgb(176, 192, 210);
     font-weight: 500;
-    font-size: .9rem;
+    font-size: 13px;
 }
 
-.filterDefault input {
+.inputDefault {
     font-family: 'Overpass', sans-serif;
     width: 105px;
     height: 16px;

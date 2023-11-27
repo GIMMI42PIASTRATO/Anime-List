@@ -11,7 +11,7 @@ export default function Filters({ name, type, dropDownData }) {
                 <div className={style.filterDefault}>
                     <div className={style.placeholder}>{<FaSearch />}</div>
                     <input
-                        className={style.gridItem}
+                        className={style.inputDefault}
                         type="text"
                         name="search"
                         id=""
@@ -22,8 +22,15 @@ export default function Filters({ name, type, dropDownData }) {
                     <div
                         className={`${style.filterDefault} ${style.filterDropdown}`}
                     >
-                        <div className={style.placeholder}>Any</div>
-                        <input type="text" name="search" id="" />
+                        <div className={style.valueWrap}>
+                            <div className={style.placeholder}>Any</div>
+                            <input
+                                className={style.inputDefault}
+                                type="text"
+                                name="search"
+                                id=""
+                            />
+                        </div>
                     </div>
                     <ul className={style.dropdown}>
                         {dropDownData.map((item, i) => (
@@ -38,8 +45,16 @@ export default function Filters({ name, type, dropDownData }) {
                     <div
                         className={`${style.filterDefault} ${style.filterDropdown}`}
                     >
-                        <div className={style.placeholder}>Any</div>
-                        <input type="text" name="search" id="" readOnly />
+                        <div className={style.valueWrap}>
+                            <div className={style.placeholder}>Any</div>
+                            <input
+                                className={style.inputDefault}
+                                type="text"
+                                name="search"
+                                id=""
+                                readOnly
+                            />
+                        </div>
                     </div>
                     <ul className={style.dropdown}>
                         {dropDownData.map((item, i) => (
